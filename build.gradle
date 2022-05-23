@@ -54,11 +54,10 @@ compileQuerydsl{
 	options.annotationProcessorPath = configurations.querydsl
 }
 
-
 jar {
-	manifest {
+	 manifest(){
 		attributes(
-				'Main-Class':'com.task.payment'
+				'Main-Class':'com.task.payment.PaymentApplication'
 		)
 	}
 }
