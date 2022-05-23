@@ -39,4 +39,4 @@ out/
 ### querydsl ###
 /build/generated/querydsl
 
-/db
+db/
