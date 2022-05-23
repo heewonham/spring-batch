@@ -8,5 +8,5 @@ ARG JAR_FILE=build/libs/payment-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
 
 # app.jar 파일을 실행
-ENTRYPOINT ["java","-jar","app.jar"]
-#ENTRYPOINT ["./wait-for-it.sh", "database:3306", "--", "java", "-jar", "app.jar"]
+#ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["./wait-for-it.sh", "database:3307", "--", "java", "-jar", "app.jar"]
