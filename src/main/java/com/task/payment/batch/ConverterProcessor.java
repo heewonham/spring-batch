@@ -7,7 +7,6 @@ import org.springframework.batch.item.ItemProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +19,6 @@ public class ConverterProcessor {
 
     @Bean
     public ItemProcessor<CardData, List<IntegrityResultData>> processor(){
-
         return o -> {
             return findIntegrity(o);
         };

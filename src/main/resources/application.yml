@@ -1,18 +1,17 @@
 logging:
   level:
     root: info
-
 spring:
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/payment_db
+    url: jdbc:mysql://localhost:3333/payment_test_db?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&serverTimezone=Asia/Seoul
     username: test
     password: 1234
   batch:
@@ -22,5 +21,3 @@ spring:
     init:
       mode: always
       encoding: UTF-8
-#    job:
-#      names: ${job.name:NONE}
